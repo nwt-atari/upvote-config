@@ -3,3 +3,18 @@ server:
 spring:
   application:
     name: upvote-public-service
+zuul:
+  ribbon:
+    eager-load:
+      enabled: true
+  routes:
+    upvote-user-service:
+      sensitiveHeaders:
+      path: /oauth/**
+      stripPrefix: false
+      serviceId: upvote-user-service
+    upvote-achievement-service:
+      sensitiveHeaders:
+      path: /achievements/**
+      stripPrefix: false
+      serviceId: upvote-achievement-service
