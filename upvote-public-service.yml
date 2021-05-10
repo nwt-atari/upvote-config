@@ -4,6 +4,9 @@ spring:
   application:
     name: upvote-public-service
 zuul:
+  host:
+    socket-timeout-millis: 6000
+    connect-timeout-millis: 6000
   ribbon:
     eager-load:
       enabled: false
@@ -18,3 +21,12 @@ zuul:
       path: /achievements/**
       stripPrefix: false
       serviceId: upvote-achievement-service
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+  instance:
+    prefer-ip-address: true
+ribbon:
+  ConnectTimeout: 6000
+  ReadTimeout: 6000
