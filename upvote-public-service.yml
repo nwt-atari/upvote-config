@@ -6,7 +6,7 @@ spring:
 zuul:
   ribbon:
     eager-load:
-      enabled: true
+      enabled: false
   routes:
     upvote-user-service:
       sensitiveHeaders:
