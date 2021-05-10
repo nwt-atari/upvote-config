@@ -10,7 +10,7 @@ zuul:
   routes:
     upvote-user-service:
       sensitiveHeaders:
-      path: /oauth/**
+      path: /auth/**
       stripPrefix: false
       serviceId: upvote-user-service
     upvote-achievement-service:
