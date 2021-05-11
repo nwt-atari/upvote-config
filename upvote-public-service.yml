@@ -15,12 +15,12 @@ zuul:
       sensitiveHeaders:
       path: /auth/**
       stripPrefix: false
-      serviceId: upvote-user-service
+      url: http://user:8087/
     upvote-achievement-service:
       sensitiveHeaders:
       path: /achievements/**
       stripPrefix: false
-      serviceId: upvote-achievement-service
+      url: http://achievement:8083/
 eureka:
   client:
     registerWithEureka: true
