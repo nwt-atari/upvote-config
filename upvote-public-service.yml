@@ -11,15 +11,20 @@ zuul:
     eager-load:
       enabled: false
   routes:
-    upvote-user-service:
+    upvote-auth-service:
       sensitiveHeaders:
       path: /auth/**
       stripPrefix: false
       url: http://user:8087/
+    upvote-user-service:
+      sensitiveHeaders:
+      path: /users/**
+      stripPrefix: true
+      url: http://user:8087/
     upvote-achievement-service:
       sensitiveHeaders:
       path: /achievements/**
-      stripPrefix: false
+      stripPrefix: true
       url: http://achievement:8083/
 eureka:
   client:
