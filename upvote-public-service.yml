@@ -16,10 +16,15 @@ zuul:
       path: /auth/**
       stripPrefix: false
       url: http://user:8087/
-    upvote-user-service:
+    upvote-profile-service:
       sensitiveHeaders:
-      path: /users/**
-      stripPrefix: true
+      path: /profiles/**
+      stripPrefix: false
+      url: http://user:8087/
+    upvote-settings-service:
+      sensitiveHeaders:
+      path: /settings/**
+      stripPrefix: false
       url: http://user:8087/
     upvote-achievement-service:
       sensitiveHeaders:
