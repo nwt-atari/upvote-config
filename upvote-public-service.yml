@@ -29,8 +29,23 @@ zuul:
     upvote-achievement-service:
       sensitiveHeaders:
       path: /achievements/**
-      stripPrefix: true
+      stripPrefix: false
       url: http://achievement:8083/
+    upvote-notification-service:
+      sensitiveHeaders:
+      path: /notifications/**
+      stripPrefix: false
+      url: http://notifiction:8085/
+    upvote-blog-service:
+      sensitiveHeaders:
+      path: /blogs/**
+      stripPrefix: false
+      url: http://blog:8082/
+    upvote-post-service:
+      sensitiveHeaders:
+      path: /posts/**
+      stripPrefix: false
+      url: http://post:8081/
 eureka:
   client:
     registerWithEureka: true
